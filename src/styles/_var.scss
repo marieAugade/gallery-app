@@ -1,0 +1,27 @@
+// Fonts families
+$font-main: "Palatino Linotype", "Book Antiqua";
+
+// Colors
+$color-grey: grey;
+$color-red: #b22222;
+$color-green: #98fb98;
+$color-blue: #4a4a6b;
+$color-white: white;
+
+// Spaces
+$space-sm: 10px;
+$space-md: 20px;
+$space-lg: 30px;
+$space-xl: 40px;
+$space-xxl: 50px;
+
+// Flex super classes
+%flex-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+%flex-vertical {
+  display: flex;
+  flex-direction: column;
+}

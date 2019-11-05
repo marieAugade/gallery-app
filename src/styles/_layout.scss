@@ -1,0 +1,25 @@
+@import "var";
+
+.spinner-loading {
+  display: block;
+  background: url(assets/images/loading.gif) no-repeat;
+  width: 32px;
+  height: 32px;
+}
+
+.l-header {
+  text-align: center;
+  background-color: $color-blue;
+  color: $color-white;
+}
+
+.l-title {
+  margin: auto;
+  padding: $space-sm;
+}
+
+.fixedbutton {
+  position: fixed;
+  bottom: $space-lg;
+  right: $space-xxl;
+}

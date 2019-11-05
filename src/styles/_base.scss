@@ -1,0 +1,11 @@
+@import "var";
+
+* {
+  box-sizing: border-box;
+  line-height: 1;
+  font-family: $font-main;
+}
+
+body {
+  background-color: #ececec !important;
+}

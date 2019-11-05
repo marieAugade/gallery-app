@@ -1,0 +1,11 @@
+<div style="text-align:center;">
+    <webcam [height]="450" [width]="450" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"
+        [allowCameraSwitch]="allowCameraSwitch" *ngIf="showWebcam" (initError)="handleInitError($event)"></webcam>
+    <br />
+</div>
+<button class="btn btn-info mt-2 float-right mr-2" (click)="triggerSnapshot();" title="Take Picture">Prendre une photo 📸</button>
+
+<h4 *ngIf="errors.length > 0">Messages:</h4>
+<ul *ngFor="let error of errors">
+    <li>{{error | json}}</li>
+</ul>

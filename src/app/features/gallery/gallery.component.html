@@ -1,0 +1,31 @@
+<h2 class="mt-4 ml-5 mb-3">Galerie</h2>
+<div class="container gallery-component mt-1">
+    <div class="row" *ngIf="webcamImages.length > 0; else noPictureBlock">
+        <!-- Gallery display -->
+        <div *ngFor="let image of webcamImages" class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <img class="img-thumbnail" src="{{ image.imageAsDataUrl }}">
+        </div>
+    </div>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg fixedbutton" (click)="openModal(template)">Open camera</button>
+
+    <!-- Modal -->
+    <ng-template #template>
+        <div class="modal-header">
+            <h4 class="modal-title pull-left">Take your picture !</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <app-camera (pictureTaken)="handleImage($event)"></app-camera>
+        </div>
+    </ng-template>
+</div>
+
+<ng-template #noPictureBlock>
+    <div class="no-picture-component">
+        <img src="../../../assets/images/picture_not_found.PNG">
+        <p class="mt-1">You don't have any photo yet...</p>
+    </div>
+</ng-template>
